@@ -1,6 +1,7 @@
 import React from 'react';
 
 const List = ({ people }) => {
+  console.log(people);
   return (
     <>
       {people.map((person) => {
