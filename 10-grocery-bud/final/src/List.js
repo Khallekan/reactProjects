@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
-const List = ({ list, removeItem, editItem }) => {
+const List = ({ items, removeItem, editItem }) => {
   return (
     <div className='grocery-list'>
-      {list.map((item) => {
+      {items.map((item) => {
         const { id, title } = item;
         return (
           <article className='grocery-item' key={id}>
@@ -16,7 +16,11 @@ const List = ({ list, removeItem, editItem }) => {
               >
                 <FaEdit />
               </button>
-              <button className='delete-btn' onClick={() => removeItem(id)}>
+              <button
+                type='button'
+                className='delete-btn'
+                onClick={() => removeItem(id)}
+              >
                 <FaTrash />
               </button>
             </div>
