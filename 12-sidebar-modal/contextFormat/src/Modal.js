@@ -1,6 +1,11 @@
 import React from 'react';
+import { useGlobalContext } from './context';
 import { FaTimes } from 'react-icons/fa';
-const Modal = ({ isModalOpen, dispatch }) => {
+const Modal = () => {
+  const {
+    dispatch,
+    state: { isModalOpen },
+  } = useGlobalContext();
   return (
     <div className={isModalOpen ? `modal-overlay show-modal` : `modal-overlay`}>
       <div className='modal-container'>

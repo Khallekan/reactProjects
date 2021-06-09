@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { useGlobalContext } from './context';
 
-const Home = ({ dispatch }) => {
+const Home = () => {
+  const { dispatch } = useGlobalContext();
   return (
     <main>
       <button
